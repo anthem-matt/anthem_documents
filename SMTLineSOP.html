@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.13: http://docutils.sourceforge.net/" />
+<title>SMT Line SOP</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7856 2015-03-30 14:41:00Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="smt-line-sop">
+<h1 class="title"><strong>SMT Line SOP</strong></h1>
+
+<p>Created 5-14-15</p>
+<p>Last Updated 6-2-15</p>
+<div class="section" id="table-of-contents">
+<span id="top"></span><h1>Table of Contents</h1>
+<div class="section" id="general-procedures">
+<h2><a class="reference internal" href="#id1">0.0</a> General Procedures</h2>
+<blockquote>
+<p><a class="reference internal" href="#id3">0.1</a> Board handling</p>
+<p><a class="reference internal" href="#id4">0.2</a> ESD Prevention</p>
+<p><a class="reference internal" href="#id5">0.3</a> Cleaning &amp; Organization</p>
+<p><a class="reference internal" href="#id6">0.4</a> Organization</p>
+</blockquote>
+</div>
+<div class="section" id="stencil-printer-ddm-novastar">
+<h2><a class="reference internal" href="#id7">1.0</a> Stencil Printer (DDM Novastar)</h2>
+<blockquote>
+<p><a class="reference internal" href="#id9">1.1</a> Operating Procedures</p>
+<p><a class="reference internal" href="#id10">1.2</a> Maintenance</p>
+<blockquote>
+<p><a class="reference internal" href="#id11">1.2.1</a> Daily</p>
+<p>1.2.2 Weekly</p>
+<p>1.2.3 Monthly</p>
+<p>1.2.4 As needed</p>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="pick-and-place-yamaha-ys12">
+<h2>2.0 Pick and Place (Yamaha YS12)</h2>
+<blockquote>
+<p>2.1 Operation Procedures</p>
+<blockquote>
+<p>2.1.1 General Production Operation</p>
+<p>2.1.2 Setup/Programming</p>
+<p>2.1.3 Troubleshooting</p>
+</blockquote>
+<p>2.2 Maintenance</p>
+<blockquote>
+<p>2.2.1 Daily</p>
+<p>2.2.2 Weekly</p>
+<p>2.2.3 Monthly</p>
+<p>2.2.4 As Needed</p>
+</blockquote>
+</blockquote>
+</div>
+<div class="section" id="reflow-oven-heller-1707-mark-ii">
+<h2>3.0 Reflow Oven (Heller 1707 Mark II)</h2>
+<blockquote>
+<p>3.1 Operation Procedures
+3.2 Maintenance</p>
+<blockquote>
+3.2.1 Daily
+3.2.2 Weekly
+3.2.3 Monthly
+3.2.4 As Needed</blockquote>
+</blockquote>
+<p>4.0 SMT Rework Station</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="id2">
+<span id="id1"></span><h1>0.0 General Procedures</h1>
+<div class="section" id="board-handling">
+<span id="id3"></span><h2>0.1 Board handling</h2>
+<p>Back to <a class="reference internal" href="#top">top</a></p>
+<ul class="simple">
+<li>No food or drinks are allowed on the production floor or anywhere else PCBs are handled.</li>
+<li>Avoid touching the surface of the PCB with bare hands. If handling a board with bare hands hold the board by its edges.</li>
+<li>If it is necessary to work with a board using bare hands, be sure not to use soaps or moisturizers containing lanolin, aloe, silicone, or other oils. Doing so can reduce the solderability of lands and plated through holes. PCB safe lotion is provided.</li>
+<li>Wear supplied nylon or nitrile gloves when handling boards.</li>
+<li>When boards are populated with LEDs, use extreme caution so as not to bend or damage the LEDs.</li>
+<li>The point between the Pick and Place and the oven is the point in production where the board is most sensitive. Use the utmost care when handling the board at this point as the components are only held on by the wet solder paste and can easily be dislodged. Do not flip the board, shake it, or hold it with one hand from an edge as the flex of the board can affect the registration of the components.</li>
+</ul>
+</div>
+<div class="section" id="esd-prevention">
+<span id="id4"></span><h2>0.2 ESD Prevention</h2>
+<p>Back to <a class="reference internal" href="#top">top</a></p>
+<ul>
+<li><p class="first">The areas on the production floor within the “ESD Protected Area” floor tape require the following measures:</p>
+<blockquote>
+<ul class="simple">
+<li>ESD safe garments - ESD safe lab coats are provided to dissipate static electricity from your clothing which are generally insulators.</li>
+<li>ESD safe personal grounding - footwear grounding straps are used to ground you when you are away from a workstation, and wrist straps are plugged in when working on boards at workstations to ensure constant grounding.</li>
+<li>ESD safe supplies and equipment - tools, cleaning fluids, wipes, etc.</li>
+<li>Conductive Floor Wax - This is used to ensure that any static electricity in your body is discharged through the floor via the footwear grounding straps rather than through touching PCBs. It also allows items such as shelving and chairs to be grounded.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>In the end, the goal of these ESD measures are to ensure everything in this space is grounded so that there are no insulators or isolated conductors which are where static electricity can build up. If static electricity is allowed to build up it can result in an electrostatic “event” where the electricity is rapidly discharged to a conductor (like zapping a cat’s nose after rubbing your feet on carpet). These events can be in excess of 30,000 volts and often times, these electrostatic discharges cannot be felt.</p>
+</div>
+<div class="section" id="cleaning-organization">
+<span id="id5"></span><h2>0.3 Cleaning &amp; Organization</h2>
+<ul class="simple">
+<li>All workcells must be cleaned at the end of every day, this includes the floor, work surfaces, equipment. If your workcell is in an ESD protected area, you must use the appropriate ESD safe cleaning supplies.</li>
+<li>Replace all items to where you found them at the end of the day.</li>
+<li>If we are running low on a consumable item, put a new card up on the Kanban board.</li>
+<li>Refill any consumable items if the container in the workspace drops below 25% full.</li>
+<li>Always use clean sponges and brass pads when using solder stations.</li>
+<li>Tin your solder iron tips!!! Not tinning the tips shortens the life of the tips significantly. It’s like putting an empty pan on a hot stove.</li>
+</ul>
+</div>
+<div class="section" id="organization">
+<span id="id6"></span><h2>0.4 Organization</h2>
+</div>
+</div>
+<div class="section" id="id8">
+<span id="id7"></span><h1>1.0 Stencil Printer (DDM Novastar)</h1>
+<p>Our current DDM Novastar stencil printer is a fully manual printer that requires some very specific techniques to get an acceptable result. The stencil printing step is one of the most crucial steps in the SMT process as a poor print will definitely result in board failures. Follow these steps carefully and if you have any questions, don’t hesitate to ask a supervisor.</p>
+<div class="section" id="operating-procedures">
+<span id="id9"></span><h2>1.1 Operating Procedures</h2>
+<ol class="arabic simple">
+<li>Remove the solder paste from refrigeration. Allow it to warm up for at least an hour, preferably two. If you have only allowed it to warm up for an hour, you may need to use the supplied spatula to “work” the paste around to soften it up, otherwise, it may be too stiff to effectively fill the apertures (openings) and release from the stencil.</li>
+<li>Once the paste is ready you will need to apply the paste to the stencil (<strong>*Photo needed*</strong>) spanning the width of the stencil as evenly as possible. It is best to place the paste at the backside of the printer, or the top of the stencil, so that you begin and end the print process at the back of the printer frame. Otherwise, when you lift the top frame, the squeegee and paste will have a tendency to slide back to the back of the frame causing a big mess as the paste gets pushed through the apertures.</li>
+<li>Next, load a bare board designated as a test board to try out the paste to confirm it’s ready. When loading boards you will need to make sure that the board is in contact with all of the guides. If it isn’t, try rotating it clockwise slightly and it should fall into place.</li>
+<li>Raise the platform by turning the z axis knob clockwise. Raise it until the board comes in contact with the stencil. Make sure that there is no space visible between the board and stencil through the apertures.</li>
+<li>Clamp down the front of the frame using the provided bar clamps so that the top frame will not move or lift during printing.</li>
+<li>Rotate and adjust the platform so that the stencil apertures line up and are as centered on the gold colored pads as possible. There are three knobs that are used for these adjustments:<ul>
+<li>Y/ø - there are two of these knobs. They can be turned together in the same direction to adjust the y axis or independently to adjust rotation (theta/ø).</li>
+<li>X - this controls the x axis which is Left to right on this machine.</li>
+</ul>
+</li>
+<li>Now you can perform a test print. Follow these printing guidelines:<ul>
+<li>Always start at the back of the printer frame.</li>
+<li>Rotate the handle toward you with two hands so that the leading edge of the squeegee lifts up ¼”</li>
+<li>Begin drawing the squeegee toward you using very precise, controlled motion. Carefully drag the squeegee past the closest apertures to you. It’s OK at this point if there are some apertures that are not filled as they will likely be filled on the second pass.</li>
+<li>Rotate the handle away from you to lift the opposite side of the squeegee, again ¼”.</li>
+<li>Check to make sure that the paste released from the squeegee and dropped onto the board and is continuous across the stencil, if not scrape the paste off the squeegee and distribute it evenly across the stencil as needed.</li>
+<li>Push the squeegee toward the back of the printer keeping the ¼” spacing on the leading edge.</li>
+<li>As you are doing this, you should see that the apertures are completely filled with paste. If not, you may be able to stop and move the squeegee back to the unfilled apertures if the paste is stuck to the squeegee blade.</li>
+<li>Do not exceed two overall passes as this has a tendency to force more paste into the holes which causes the paste to squeeze underneath the stencil resulting in bridging between the connections.</li>
+<li>If paste gets between the stencil and the board, the underside of the stencil will need to be cleaned immediately.</li>
+</ul>
+</li>
+<li>When done printing, remove the bar clamps and carefully lift the top frame up. I’ve found that lifting one corner first allows the frame to flex which prevents the paste from lifting with the apertures.</li>
+<li>Carefully inspect the print and make sure that there is no bridging between pads or pads without paste.</li>
+<li>If problems are found with the print, you may clean the board by spraying the board generously with the stencil cleaner and carefully wipe the board using L30 wipes. Avoid getting paste in plated through-holes as it can plug these and cause problems for through-hole processes. This is best done by heavily covering the board with cleaning spray and using clean wipes. Make sure the board is dry before you try to reprint on it.</li>
+<li>Once you have a good print, log the board # into the data terminal <strong>* not setup yet *</strong></li>
+<li>Place the board on the conveyor to the Pick and Place.</li>
+<li>At the end of the day, return all paste back to refrigeration</li>
+</ol>
+</div>
+<div class="section" id="maintenance">
+<span id="id10"></span><h2>1.2 Maintenance</h2>
+<p>Cleanliness is absolutely critical for the stencil printer. The apertures must always be clean, otherwise the clogged apertures will prevent paste from reaching the board.</p>
+<div class="section" id="daily">
+<span id="id11"></span><h3>1.2.1 Daily</h3>
+<ol class="arabic simple">
+<li>The stencil must be thoroughly cleaned at the end of every shift</li>
+<li>Paste must be removed as thoroughly as possible and placed in an airtight container.</li>
+<li>Use caution when cleaning the stencil as there are very fragile apertures that the wipes can get caught on.</li>
+<li>Always store PCBs above the stencil printer so that paste does not fall on the boards.</li>
+<li>This can be a messy process, be sure to clean the printer and surrounding areas thoroughly.</li>
+</ol>
+</div>
+<div class="section" id="weekly">
+<span id="id12"></span><h3>1.2.2 Weekly</h3>
+<ol class="arabic simple">
+<li>Check condition of stencil - there should not be any damage to the stencil apertures</li>
+<li>Check squeegee blades - make sure there are no tears or damage to the edges that could affect printing</li>
+</ol>
+</div>
+<div class="section" id="monthly">
+<span id="id13"></span><h3>1.2.3 Monthly</h3>
+<p>There are no monthly maintenance items at this time</p>
+</div>
+<div class="section" id="as-needed">
+<span id="id14"></span><h3>1.2.4 As needed</h3>
+<ol class="arabic simple">
+<li>Replace squeegee blades if there is damage</li>
+<li>Replace stencil if there is damage or if there is a new version:<ol class="arabic">
+<li>Lower the platform if it is raised</li>
+<li>Use the bar clamps to clamp the top frame down</li>
+<li>Remove the plastic knurled knobs and l shaped brackets that hold the silver stencil frame down.</li>
+<li>Carefully lift the frame out of the black top frame. This stencil frame is quite heavy and awkward, get someone’s help if you have trouble.</li>
+<li>Flip the frame upside-down onto a table large enough for it to fit on.</li>
+<li>Loosen the black hex bolts (4mm) on the side first to loosen the tension on the stencil</li>
+<li>Remove the black hex bolts (4mm) on the black steel bars within the frame and pull the black clamp bars off of the posts</li>
+<li>Remove the stencil and replace the new stencil in the same orientation. Be sure that the etched stencil information faces down.</li>
+<li>Replace the black clamp bars so that the curved edge faces down and toward the center of the frame</li>
+<li>Replace the black hex bolts and tighten by hand</li>
+<li>Place the stencil frame back into the black top frame. There are four “ledges” attached to the bottom of the cross bars that actually hold the frame in. Because of the warp in the silver stencil frame, these black ledges just barely engage the stencil frame. The silver stencil frame must rest on these ledges otherwise the stencil frame will just fall through the top frame, potentially damaging the stencil and frame.</li>
+<li>Replace the plastic knobs and L brackets and hand tighten enough that the frame is clamped in and will not move</li>
+</ol>
+</li>
+<li>The rubber belts that control the platform movement are likely to last for years due to the minimal movement and use that they are subject to, however, there is always a chance that these may need replacement as needed.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h1>2.0 Pick and Place (Yamaha YS12)</h1>
+<p>The Yamaha YS12 is a very complex and precise machine that in operation is highly automated and generally requires little input from the operator. That said, the setup, maintenance and troubleshooting of the machine are more involved.</p>
+<div class="section" id="operation-procedures">
+<h2>2.1 Operation Procedures</h2>
+<div class="section" id="general-production-operation">
+<h3>2.1.1 General Production Operation</h3>
+<ol class="arabic simple">
+<li>Turn the main power switch to the “l” position to power the machine on.</li>
+<li>Check the air supply on the front, bottom, left of the machine. The larger green numbers should be above 330. If not, make sure the air supply is connected. If it is, check with the shop manager to verify that the air compressor is operating normally.</li>
+<li>Once the software finishes starting up, press the “Active” button on the machine</li>
+<li>Turn the Emergency Stop button clockwise to release</li>
+<li>If it asks you if you want to “Return to Origin” select no. Another window will likely pop up saying that “Return to Origin” has not been performed. Select “Error Clear” at the bottom of the window.</li>
+<li>Another window will likely show up saying “Emergency Stop Function is Active”. Again, select “Error Clear” to clear this error.</li>
+<li>Login in the Operator screen using your account</li>
+<li>Load the appropriate board data in the Setup screen</li>
+<li>A couple more error screens will pop up, just select “Error Clear” for both of them</li>
+<li>Press the “Ready” button on the machine</li>
+<li>On the Setup screen, select “Origin” to return the head to it’s origin. If the head isn’t close to its origin (left front of machine) it will take some time for it to do this.</li>
+<li>Press the green “Start” button</li>
+<li>If a window pops up regarding the conveyor width, follow the instructions to check that there are no boards in the machine, and select “OK”</li>
+<li>The machine is now in Auto Running mode</li>
+<li>Place a pasted board on the entrance conveyor and it will automatically feed the board in and begin placing the components</li>
+<li>When it is complete, the board will exit the machine and the exit conveyor’s orange check button should be depressed so that it stops before moving on to the reflow oven.</li>
+</ol>
+</div>
+<div class="section" id="setup-programming-step-by-step">
+<h3>2.1.2 Setup/Programming Step-by-Step</h3>
+<ol class="arabic simple">
+<li>Check that all applicable parts are loaded.</li>
+<li>Convert cad data to VIOS Text with a filename no longer than 8 characters.</li>
+<li>Save the VIOS Text file to a USB Drive and plug it into the USB port near the air inlet on the PnP.</li>
+<li>Create a new board in the “Setup” menu using the VIOS Text file.</li>
+<li>Sort the Parts by name</li>
+<li>For each part:<ol class="arabic">
+<li>Select the first part and click database</li>
+<li>Select the part from the database.</li>
+<li>Click “Set” to set the data to the board.</li>
+<li>Enter the Set No. (this is the Feeder No.)</li>
+</ol>
+</li>
+<li>Save the board</li>
+<li>Go to Board &gt; Fiducial &gt; click “Edit” and set the block to “Execute”</li>
+<li>Go to Board &gt; Board &gt; Set the appropriate information for “A: Board Size X”, “B: Board Size Y”, and “C: Board Size Height”.</li>
+<li>Change J: Board Fix Type to Edge Clamp</li>
+<li>Go to Board &gt; Offset and change the offset</li>
+<li>Go to the Mark menu, select the BLOCK_FIDUCIAL</li>
+<li>Click Database, select DB No. 2, click Set</li>
+<li>Save the board</li>
+<li>Open the Optimizer and follow these steps to optimize the head selection:<ol class="arabic">
+<li>Click Create…</li>
+<li>Click Select for the target board</li>
+<li>Select the file you want to optimize, click select</li>
+<li>Click select for the Save Board</li>
+<li>Type a file name for the optimize file</li>
+<li>Under Exec. Condition, set “Feeder set condition” to “All Parts Fixed”</li>
+<li>Click Save Setting”</li>
+<li>Delete any existing setting files from the list of optimizations on the right</li>
+<li>Select the setting file you just created from the list on the left</li>
+<li>Click the arrow to add it to the list of optimizations on the right</li>
+<li>Click “Execute”</li>
+</ol>
+</li>
+<li>Once the optimizer finishes, open up the optimized board in the Setup menu</li>
+<li>Press “Ready” and “Start” on the machine in that order to begin Auto Running</li>
+<li>Insert a pasted board to test the programming</li>
+<li>Carefully inspect the placement of the components to verify that there are no errors.</li>
+</ol>
+</div>
+<div class="section" id="setup-programming-tips">
+<h3>2.1.3 Setup/Programming Tips</h3>
+<ol class="arabic simple">
+<li>Any changes to programming MUST be approved by Evan</li>
+<li>Raw board data as provided by our engineering team must be converted to VIOS Text format with a filename no longer than 8 characters.</li>
+<li>The YS12 requires to main categories of data for programming:
+1. Board Data - This data contains Mount, Offset, and Fiducial information. This data comes from a VIOS Text file that you must load onto the machine via USB drive.
+2. Parts Data - This data contains the details about each component used such as shape, tape pitch, feeder #, pick parameters, and so on. All of these details are stored in the Parts Database and can be reused by assigning the appropriate database number to a part. The parts data is fixed data that should never be changed once it is setup correctly. The only time this data should be changed is if we add a new component for which there is no existing part in the database with the correct profile.</li>
+</ol>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">SMTLineSOP.txt</tt>, line 315)</p>
+Enumerated list ends without a blank line; unexpected unindent.</div>
+<ol class="arabic simple">
+<li>Make sure if setting up a new part in the database that it does not use “Special Check” in the vision data. If this is set, change it to “Normal Check” otherwise it will cause vision errors.</li>
+<li>Optimization of the board data is necessary for the machine to select the heads which will result in the most efficient usage.</li>
+</ol>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">SMTLineSOP.txt</tt>, line 317)</p>
+Enumerated list ends without a blank line; unexpected unindent.</div>
+<p>3. Always use the setting “All Parts Fixed” in the “Set Optimization Parameters” dialog so that it will use the current feeder arrangement rather than creating a new arrangement.
+2.1.4 Troubleshooting
+1. In general, the error messages on the YS12 usually give you the information you need to trace down the problem.
+2. If you receive a vision error during production, take a look at the image provide in the error:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">SMTLineSOP.txt</tt>, line 321)</p>
+Unexpected indentation.</div>
+<blockquote>
+<ol class="arabic simple">
+<li>If the part is not visible on the nozzle and not in the tray, it is likely that the part was either dropped or there was no part in the tray. Look at the image of the nozzle, does it look like there is anything blocking the airway? If not, try acknowledging the error and continuing. If there is something blocking the nozzle it will need to be cleaned using the appropriate double sided tape.</li>
+<li>If the part is visible on the nozzle and appears to be aligned well, you likely have problems that will need to be changed in the part data. The only way to fix this is to stop auto-running and change the vision check from “Special Check” to “Normal Check”.</li>
+<li>If the part is visible in the tray, but appears to be misaligned, you likely have a problem with static electricity shifting a small 0402 chip component. While running a board, try to acknowledge the error and continue. Once the board is complete and out of the machine. The feeder for that component can be removed and a magnet added underneath the tape that will help keep the component in place.</li>
+</ol>
+</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">SMTLineSOP.txt</tt>, line 324)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<ol class="arabic simple">
+<li>Interlock errors are very common and happen as a result of:
+1. Insufficient air pressure
+2. Opening doors on the machine
+3. Emergency Stop button depressed
+4. Feeder not fully engaged</li>
+</ol>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">SMTLineSOP.txt</tt>, line 329)</p>
+Enumerated list ends without a blank line; unexpected unindent.</div>
+<p>To clear these errors, just fix whatever was causing it and clear the error.</p>
+<p>2.2 Maintenance
+The Yamaha YS12 is a relatively low maintenance machine. As long as we keep it clean and do the following, it should stay this way for years.
+2.2.1 Daily
+1. Clean top of machine with a damp cloth and clean up surrounding area
+2. Remove any dropped components from within the machine and from the open feeder slots
+2.2.2 Weekly
+1. Check all nozzles - make sure that they are clean and that their spring action is functioning
+2. Empty the dump bin - these components should go in a bin labeled
+Dumped Components.
+2.2.3 Monthly</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">SMTLineSOP.txt</tt>, line 342)</p>
+Unexpected indentation.</div>
+<blockquote>
+<ol class="arabic simple">
+<li>Check rails and apply lubricant as necessary</li>
+</ol>
+</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">SMTLineSOP.txt</tt>, line 343)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<dl class="docutils">
+<dt>2.2.4 As Needed</dt>
+<dd><ol class="first last arabic simple">
+<li>If you start getting vacuum errors, we will likely need to clean out the air passages just above the heads or change an air filter.</li>
+</ol>
+</dd>
+</dl>
+<p>3.0 Reflow Oven (Heller 1707 Mark II)</p>
+<dl class="docutils">
+<dt>3.1 Operation Procedures</dt>
+<dd><ol class="first last arabic simple">
+<li>Turn on the monitor</li>
+<li>Login using your account</li>
+<li>Select Mode&gt;Operate</li>
+<li>Load the Alpha WS820 profile</li>
+<li>The heaters, exhaust, and conveyor will startup.</li>
+<li>Do not run boards until all the heating zones have reached operating temperature</li>
+<li>Make sure you have board stiffeners ready</li>
+<li>Carefully take the board with placed components and put the stiffeners on the edges. Do this VERY carefully as the components can easily fall off[a] or be dislodged.</li>
+<li>Place the board with stiffeners onto the pin conveyor. To avoid hitting the components place one side of the board underneath the sensors above the pin conveyor and pivot the other side down.</li>
+<li>Wait for the board to reach the exit. Use heat resistant gloves to pick up the board and move it to a cooling area.</li>
+<li>To shutdown the machine load the Cooldown program and you can leave it in that mode. It will shut off the conveyor and exhaust fan when it cools down below 95ºc in all zones. This generally takes 30-45 minutes.</li>
+</ol>
+</dd>
+</dl>
+<p>3.2 Maintenance
+The Heller 1707 is a relatively simple machine that requires little maintenance. Never use alcohol or other flammable liquids on or in the machine (it is an oven after all).</p>
+<dl class="docutils">
+<dt>3.2.1 Daily</dt>
+<dd><ol class="first last arabic simple">
+<li>At the start of every day, open the cover and vacuum out the conveyor path.</li>
+<li>Wipe the top of the machine with a damp cloth to remove dust.</li>
+</ol>
+</dd>
+<dt>3.2.2 Weekly</dt>
+<dd><ol class="first last arabic simple">
+<li>Check the blower fans on top of the machine to ensure that they are working. If you can’t see the fan, you can use a zip tie to carefully test the fan.</li>
+</ol>
+</dd>
+<dt>3.2.3 Monthly</dt>
+<dd><ol class="first last arabic simple">
+<li>There are no monthly maintenance items at this time.</li>
+</ol>
+</dd>
+<dt>3.2.4 As Needed</dt>
+<dd><ol class="first last arabic simple">
+<li>The oil container at the back of the machine holds high temp chain oil that is used on the conveyor chains. This should last for over a year. When replacing, use only Oberon oil provided by Heller. Other oils may burn and produce a foul smell.</li>
+<li>The conveyor chain belts could stretch out over time. If this happens, it may be necessary to remove a link or two.</li>
+<li>The conveyor rail on the inside of the oven may occasionally need high temperature grease applied to it, though, this will likely not be an issue for us as we seldom change the conveyor width.</li>
+</ol>
+</dd>
+</dl>
+<p>4.0 SMT Rework Station
+The SMT Rework station is used for inspecting and reworking SMT assembled boards. SMT rework requires some specialized tools for dealing with the unique challenges that this process presents.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">SMTLineSOP.txt</tt>, line 383)</p>
+Unexpected indentation.</div>
+<blockquote>
+<ol class="arabic simple">
+<li>Always use an ESD wrist strap and jacket when working at this station.</li>
+<li>Never apply excessive pressure when using SMT tips, doing so can damage the tip and the PCB.</li>
+</ol>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">SMTLineSOP.txt</tt>, line 385)</p>
+Enumerated list ends without a blank line; unexpected unindent.</div>
+<p>3. The following are the specialized tips used for SMD rework:[b]
+1. Hoof tip - this tip is used to drag solder QFPs and other fine leaded components
+2. Tunnel Tip - used to remove our LED Drivers and octal buffers - Hot air may be needed to remove the LED Drivers
+3. Bifurcated Tips - These are used to remove chip components. For these to work, the tip should be filled with solder between the prongs. These prongs fit around the ends of the chip and once the solder melts, the surface tension of the solder in the tip picks up the chip.
+4. Conical tip - this tip is a general purpose tip that works well for reflowing solder to fix bridging, remove solder balls, etc.
+5. Chisel tip - works well for reflowing solder on larger pads and desoldering using solder braid.
+1. Our rework station does not have temperature control as the temperature is determined by tip selection. All the tips we have are within the same temperature range.
+2. Always tin your tips immediately after use!!!
+3. When inspecting boards, start with the 3.5x Luxo magnifier. Only use higher magnification with the microscope for referee purposes.
+4. The magnifier and microscope should only be cleaned with the appropriate lens cleaning wipes to prevent damage to the optics.
+5. Turn the soldering station off at the end of day.</p>
+</blockquote>
+<p>[a]Photos needed to show the correct way to hold the board while putting the stiffeners on.
+[b]Need photos of these tips.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,407 @@
+################
+**SMT Line SOP**
+################
+
+
+Created 5-14-15
+
+Last Updated 6-2-15 
+
+
+.. _top:
+
+Table of Contents
+#################
+
+0.0_ General Procedures
+***********************
+
+	0.1_ Board handling
+
+	
+	0.2_ ESD Prevention
+
+	
+	0.3_ Cleaning & Organization
+	
+	0.4_ Organization
+
+1.0_ Stencil Printer (DDM Novastar)
+***********************************
+
+	1.1_ Operating Procedures
+	
+	1.2_ Maintenance
+	
+		1.2.1_ Daily
+	
+		1.2.2 Weekly
+	
+		1.2.3 Monthly
+	
+		1.2.4 As needed
+		
+2.0 Pick and Place (Yamaha YS12)
+********************************
+
+	2.1 Operation Procedures
+		
+		2.1.1 General Production Operation
+		
+		2.1.2 Setup/Programming
+		
+		2.1.3 Troubleshooting
+
+	2.2 Maintenance
+		
+		2.2.1 Daily
+		
+		2.2.2 Weekly
+		
+		2.2.3 Monthly
+		
+		2.2.4 As Needed
+
+3.0 Reflow Oven (Heller 1707 Mark II)
+*************************************
+
+	3.1 Operation Procedures
+	3.2 Maintenance
+
+		3.2.1 Daily
+		3.2.2 Weekly
+		3.2.3 Monthly
+		3.2.4 As Needed
+
+4.0 SMT Rework Station
+
+
+**********************
+
+.. _0.0:
+
+0.0 General Procedures
+######################
+
+.. _0.1:
+
+0.1 Board handling
+******************
+
+Back to top_
+
+- No food or drinks are allowed on the production floor or anywhere else PCBs are handled.
+- Avoid touching the surface of the PCB with bare hands. If handling a board with bare hands hold the board by its edges. 
+- If it is necessary to work with a board using bare hands, be sure not to use soaps or moisturizers containing lanolin, aloe, silicone, or other oils. Doing so can reduce the solderability of lands and plated through holes. PCB safe lotion is provided.
+- Wear supplied nylon or nitrile gloves when handling boards.
+- When boards are populated with LEDs, use extreme caution so as not to bend or damage the LEDs.
+- The point between the Pick and Place and the oven is the point in production where the board is most sensitive. Use the utmost care when handling the board at this point as the components are only held on by the wet solder paste and can easily be dislodged. Do not flip the board, shake it, or hold it with one hand from an edge as the flex of the board can affect the registration of the components.
+
+.. _0.2:
+
+0.2 ESD Prevention
+******************
+
+Back to top_
+
+- The areas on the production floor within the “ESD Protected Area” floor tape require the following measures:
+
+	- ESD safe garments - ESD safe lab coats are provided to dissipate static electricity from your clothing which are generally insulators.
+	- ESD safe personal grounding - footwear grounding straps are used to ground you when you are away from a workstation, and wrist straps are plugged in when working on boards at workstations to ensure constant grounding.
+	- ESD safe supplies and equipment - tools, cleaning fluids, wipes, etc.
+	- Conductive Floor Wax - This is used to ensure that any static electricity in your body is discharged through the floor via the footwear grounding straps rather than through touching PCBs. It also allows items such as shelving and chairs to be grounded.
+
+In the end, the goal of these ESD measures are to ensure everything in this space is grounded so that there are no insulators or isolated conductors which are where static electricity can build up. If static electricity is allowed to build up it can result in an electrostatic “event” where the electricity is rapidly discharged to a conductor (like zapping a cat’s nose after rubbing your feet on carpet). These events can be in excess of 30,000 volts and often times, these electrostatic discharges cannot be felt.
+
+.. _0.3:
+
+0.3 Cleaning & Organization
+***************************
+- All workcells must be cleaned at the end of every day, this includes the floor, work surfaces, equipment. If your workcell is in an ESD protected area, you must use the appropriate ESD safe cleaning supplies.
+- Replace all items to where you found them at the end of the day. 
+- If we are running low on a consumable item, put a new card up on the Kanban board.
+- Refill any consumable items if the container in the workspace drops below 25% full.
+- Always use clean sponges and brass pads when using solder stations.
+- Tin your solder iron tips!!! Not tinning the tips shortens the life of the tips significantly. It’s like putting an empty pan on a hot stove.
+
+.. _0.4:
+
+0.4 Organization
+****************
+
+.. _1.0:
+
+1.0 Stencil Printer (DDM Novastar)
+##################################
+
+Our current DDM Novastar stencil printer is a fully manual printer that requires some very specific techniques to get an acceptable result. The stencil printing step is one of the most crucial steps in the SMT process as a poor print will definitely result in board failures. Follow these steps carefully and if you have any questions, don’t hesitate to ask a supervisor.
+
+.. _1.1:
+
+1.1 Operating Procedures
+************************
+
+#. Remove the solder paste from refrigeration. Allow it to warm up for at least an hour, preferably two. If you have only allowed it to warm up for an hour, you may need to use the supplied spatula to “work” the paste around to soften it up, otherwise, it may be too stiff to effectively fill the apertures (openings) and release from the stencil.
+#. Once the paste is ready you will need to apply the paste to the stencil (***Photo needed***) spanning the width of the stencil as evenly as possible. It is best to place the paste at the backside of the printer, or the top of the stencil, so that you begin and end the print process at the back of the printer frame. Otherwise, when you lift the top frame, the squeegee and paste will have a tendency to slide back to the back of the frame causing a big mess as the paste gets pushed through the apertures.
+#. Next, load a bare board designated as a test board to try out the paste to confirm it’s ready. When loading boards you will need to make sure that the board is in contact with all of the guides. If it isn’t, try rotating it clockwise slightly and it should fall into place.
+#. Raise the platform by turning the z axis knob clockwise. Raise it until the board comes in contact with the stencil. Make sure that there is no space visible between the board and stencil through the apertures.
+#. Clamp down the front of the frame using the provided bar clamps so that the top frame will not move or lift during printing.
+#. Rotate and adjust the platform so that the stencil apertures line up and are as centered on the gold colored pads as possible. There are three knobs that are used for these adjustments: 
+  
+   - Y/ø - there are two of these knobs. They can be turned together in the same direction to adjust the y axis or independently to adjust rotation (theta/ø).
+   - X - this controls the x axis which is Left to right on this machine.
+
+#. Now you can perform a test print. Follow these printing guidelines:
+   
+   - Always start at the back of the printer frame.
+   - Rotate the handle toward you with two hands so that the leading edge of the squeegee lifts up ¼”
+   - Begin drawing the squeegee toward you using very precise, controlled motion. Carefully drag the squeegee past the closest apertures to you. It’s OK at this point if there are some apertures that are not filled as they will likely be filled on the second pass.
+   - Rotate the handle away from you to lift the opposite side of the squeegee, again ¼”. 
+   - Check to make sure that the paste released from the squeegee and dropped onto the board and is continuous across the stencil, if not scrape the paste off the squeegee and distribute it evenly across the stencil as needed.
+   - Push the squeegee toward the back of the printer keeping the ¼” spacing on the leading edge.
+   - As you are doing this, you should see that the apertures are completely filled with paste. If not, you may be able to stop and move the squeegee back to the unfilled apertures if the paste is stuck to the squeegee blade. 
+   - Do not exceed two overall passes as this has a tendency to force more paste into the holes which causes the paste to squeeze underneath the stencil resulting in bridging between the connections. 
+   - If paste gets between the stencil and the board, the underside of the stencil will need to be cleaned immediately.
+
+#. When done printing, remove the bar clamps and carefully lift the top frame up. I’ve found that lifting one corner first allows the frame to flex which prevents the paste from lifting with the apertures. 
+#. Carefully inspect the print and make sure that there is no bridging between pads or pads without paste. 
+#. If problems are found with the print, you may clean the board by spraying the board generously with the stencil cleaner and carefully wipe the board using L30 wipes. Avoid getting paste in plated through-holes as it can plug these and cause problems for through-hole processes. This is best done by heavily covering the board with cleaning spray and using clean wipes. Make sure the board is dry before you try to reprint on it.
+#. Once you have a good print, log the board # into the data terminal *** not setup yet ***
+#. Place the board on the conveyor to the Pick and Place.
+#. At the end of the day, return all paste back to refrigeration
+
+.. _1.2:
+
+1.2 Maintenance
+***************
+
+Cleanliness is absolutely critical for the stencil printer. The apertures must always be clean, otherwise the clogged apertures will prevent paste from reaching the board.
+
+.. _1.2.1:
+
+
+1.2.1 Daily
+~~~~~~~~~~~
+
+1. The stencil must be thoroughly cleaned at the end of every shift
+2. Paste must be removed as thoroughly as possible and placed in an airtight container.
+3. Use caution when cleaning the stencil as there are very fragile apertures that the wipes can get caught on.
+4. Always store PCBs above the stencil printer so that paste does not fall on the boards. 
+5. This can be a messy process, be sure to clean the printer and surrounding areas thoroughly.
+
+.. _1.2.2:
+
+
+1.2.2 Weekly
+~~~~~~~~~~~~
+
+1. Check condition of stencil - there should not be any damage to the stencil apertures
+2. Check squeegee blades - make sure there are no tears or damage to the edges that could affect printing
+
+.. _1.2.3:
+
+
+1.2.3 Monthly
+~~~~~~~~~~~~~
+
+There are no monthly maintenance items at this time
+
+
+.. _1.2.4:
+
+1.2.4 As needed
+~~~~~~~~~~~~~~~
+
+#. Replace squeegee blades if there is damage
+#. Replace stencil if there is damage or if there is a new version:
+  
+   #. Lower the platform if it is raised
+   #. Use the bar clamps to clamp the top frame down
+   #. Remove the plastic knurled knobs and l shaped brackets that hold the silver stencil frame down.
+   #. Carefully lift the frame out of the black top frame. This stencil frame is quite heavy and awkward, get someone’s help if you have trouble.
+   #. Flip the frame upside-down onto a table large enough for it to fit on.
+   #. Loosen the black hex bolts (4mm) on the side first to loosen the tension on the stencil
+   #. Remove the black hex bolts (4mm) on the black steel bars within the frame and pull the black clamp bars off of the posts
+   #. Remove the stencil and replace the new stencil in the same orientation. Be sure that the etched stencil information faces down.
+   #. Replace the black clamp bars so that the curved edge faces down and toward the center of the frame
+   #. Replace the black hex bolts and tighten by hand
+   #. Place the stencil frame back into the black top frame. There are four “ledges” attached to the bottom of the cross bars that actually hold the frame in. Because of the warp in the silver stencil frame, these black ledges just barely engage the stencil frame. The silver stencil frame must rest on these ledges otherwise the stencil frame will just fall through the top frame, potentially damaging the stencil and frame.
+   #. Replace the plastic knobs and L brackets and hand tighten enough that the frame is clamped in and will not move
+
+#. The rubber belts that control the platform movement are likely to last for years due to the minimal movement and use that they are subject to, however, there is always a chance that these may need replacement as needed.
+        
+
+
+2.0 Pick and Place (Yamaha YS12)
+################################
+
+
+The Yamaha YS12 is a very complex and precise machine that in operation is highly automated and generally requires little input from the operator. That said, the setup, maintenance and troubleshooting of the machine are more involved.
+
+
+2.1 Operation Procedures
+************************
+
+2.1.1 General Production Operation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Turn the main power switch to the “l” position to power the machine on.
+2. Check the air supply on the front, bottom, left of the machine. The larger green numbers should be above 330. If not, make sure the air supply is connected. If it is, check with the shop manager to verify that the air compressor is operating normally.
+3. Once the software finishes starting up, press the “Active” button on the machine
+4. Turn the Emergency Stop button clockwise to release
+5. If it asks you if you want to “Return to Origin” select no. Another window will likely pop up saying that “Return to Origin” has not been performed. Select “Error Clear” at the bottom of the window.
+6. Another window will likely show up saying “Emergency Stop Function is Active”. Again, select “Error Clear” to clear this error.
+7. Login in the Operator screen using your account
+8. Load the appropriate board data in the Setup screen
+9. A couple more error screens will pop up, just select “Error Clear” for both of them
+10. Press the “Ready” button on the machine
+11. On the Setup screen, select “Origin” to return the head to it’s origin. If the head isn’t close to its origin (left front of machine) it will take some time for it to do this.
+12. Press the green “Start” button
+13. If a window pops up regarding the conveyor width, follow the instructions to check that there are no boards in the machine, and select “OK”
+14. The machine is now in Auto Running mode
+15. Place a pasted board on the entrance conveyor and it will automatically feed the board in and begin placing the components
+16. When it is complete, the board will exit the machine and the exit conveyor’s orange check button should be depressed so that it stops before moving on to the reflow oven.
+
+2.1.2 Setup/Programming Step-by-Step
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Check that all applicable parts are loaded.
+#. Convert cad data to VIOS Text with a filename no longer than 8 characters.
+#. Save the VIOS Text file to a USB Drive and plug it into the USB port near the air inlet on the PnP.
+#. Create a new board in the “Setup” menu using the VIOS Text file.
+#. Sort the Parts by name
+#. For each part:
+
+   #. Select the first part and click database
+   #. Select the part from the database.
+   #. Click “Set” to set the data to the board.
+   #. Enter the Set No. (this is the Feeder No.)
+
+#. Save the board
+#. Go to Board > Fiducial > click “Edit” and set the block to “Execute”
+#. Go to Board > Board > Set the appropriate information for “A: Board Size X”, “B: Board Size Y”, and “C: Board Size Height”. 
+#. Change J: Board Fix Type to Edge Clamp
+#. Go to Board > Offset and change the offset
+#. Go to the Mark menu, select the BLOCK_FIDUCIAL
+#. Click Database, select DB No. 2, click Set
+#. Save the board
+#. Open the Optimizer and follow these steps to optimize the head selection:
+   
+   #. Click Create…
+   #. Click Select for the target board
+   #. Select the file you want to optimize, click select
+   #. Click select for the Save Board
+   #. Type a file name for the optimize file
+   #. Under Exec. Condition, set “Feeder set condition” to “All Parts Fixed”
+   #. Click Save Setting”
+   #. Delete any existing setting files from the list of optimizations on the right
+   #. Select the setting file you just created from the list on the left
+   #. Click the arrow to add it to the list of optimizations on the right
+   #. Click “Execute”
+
+#. Once the optimizer finishes, open up the optimized board in the Setup menu
+#. Press “Ready” and “Start” on the machine in that order to begin Auto Running
+#. Insert a pasted board to test the programming
+#. Carefully inspect the placement of the components to verify that there are no errors.
+
+2.1.3 Setup/Programming Tips
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Any changes to programming MUST be approved by Evan
+2. Raw board data as provided by our engineering team must be converted to VIOS Text format with a filename no longer than 8 characters.
+3. The YS12 requires to main categories of data for programming:
+   1. Board Data - This data contains Mount, Offset, and Fiducial information. This data comes from a VIOS Text file that you must load onto the machine via USB drive.
+   2. Parts Data - This data contains the details about each component used such as shape, tape pitch, feeder #, pick parameters, and so on. All of these details are stored in the Parts Database and can be reused by assigning the appropriate database number to a part. The parts data is fixed data that should never be changed once it is setup correctly. The only time this data should be changed is if we add a new component for which there is no existing part in the database with the correct profile.
+1. Make sure if setting up a new part in the database that it does not use “Special Check” in the vision data. If this is set, change it to “Normal Check” otherwise it will cause vision errors.
+2. Optimization of the board data is necessary for the machine to select the heads which will result in the most efficient usage. 
+3. Always use the setting “All Parts Fixed” in the “Set Optimization Parameters” dialog so that it will use the current feeder arrangement rather than creating a new arrangement.
+2.1.4 Troubleshooting
+1. In general, the error messages on the YS12 usually give you the information you need to trace down the problem. 
+2. If you receive a vision error during production, take a look at the image provide in the error:
+   1. If the part is not visible on the nozzle and not in the tray, it is likely that the part was either dropped or there was no part in the tray. Look at the image of the nozzle, does it look like there is anything blocking the airway? If not, try acknowledging the error and continuing. If there is something blocking the nozzle it will need to be cleaned using the appropriate double sided tape. 
+   2. If the part is visible on the nozzle and appears to be aligned well, you likely have problems that will need to be changed in the part data. The only way to fix this is to stop auto-running and change the vision check from “Special Check” to “Normal Check”. 
+   3. If the part is visible in the tray, but appears to be misaligned, you likely have a problem with static electricity shifting a small 0402 chip component. While running a board, try to acknowledge the error and continue. Once the board is complete and out of the machine. The feeder for that component can be removed and a magnet added underneath the tape that will help keep the component in place.
+1. Interlock errors are very common and happen as a result of:
+   1. Insufficient air pressure
+   2. Opening doors on the machine
+   3. Emergency Stop button depressed
+   4. Feeder not fully engaged
+To clear these errors, just fix whatever was causing it and clear the error.
+
+
+2.2 Maintenance
+The Yamaha YS12 is a relatively low maintenance machine. As long as we keep it clean and do the following, it should stay this way for years.
+2.2.1 Daily 
+1. Clean top of machine with a damp cloth and clean up surrounding area
+2. Remove any dropped components from within the machine and from the open feeder slots
+2.2.2 Weekly
+1. Check all nozzles - make sure that they are clean and that their spring action is functioning
+2. Empty the dump bin - these components should go in a bin labeled 
+Dumped Components.
+2.2.3 Monthly
+   1. Check rails and apply lubricant as necessary
+2.2.4 As Needed
+   1. If you start getting vacuum errors, we will likely need to clean out the air passages just above the heads or change an air filter.
+
+
+3.0 Reflow Oven (Heller 1707 Mark II)
+
+
+3.1 Operation Procedures 
+   1. Turn on the monitor
+   2. Login using your account
+   3. Select Mode>Operate
+   4. Load the Alpha WS820 profile
+   5. The heaters, exhaust, and conveyor will startup. 
+   6. Do not run boards until all the heating zones have reached operating temperature
+   7. Make sure you have board stiffeners ready
+   8. Carefully take the board with placed components and put the stiffeners on the edges. Do this VERY carefully as the components can easily fall off[a] or be dislodged.
+   9. Place the board with stiffeners onto the pin conveyor. To avoid hitting the components place one side of the board underneath the sensors above the pin conveyor and pivot the other side down.
+   10. Wait for the board to reach the exit. Use heat resistant gloves to pick up the board and move it to a cooling area.
+   11. To shutdown the machine load the Cooldown program and you can leave it in that mode. It will shut off the conveyor and exhaust fan when it cools down below 95ºc in all zones. This generally takes 30-45 minutes.
+
+
+3.2 Maintenance
+The Heller 1707 is a relatively simple machine that requires little maintenance. Never use alcohol or other flammable liquids on or in the machine (it is an oven after all).
+
+
+3.2.1 Daily
+   1. At the start of every day, open the cover and vacuum out the conveyor path.
+   2. Wipe the top of the machine with a damp cloth to remove dust.
+3.2.2 Weekly
+   1. Check the blower fans on top of the machine to ensure that they are working. If you can’t see the fan, you can use a zip tie to carefully test the fan. 
+3.2.3 Monthly
+   1. There are no monthly maintenance items at this time.
+3.2.4 As Needed
+   1. The oil container at the back of the machine holds high temp chain oil that is used on the conveyor chains. This should last for over a year. When replacing, use only Oberon oil provided by Heller. Other oils may burn and produce a foul smell.
+   2. The conveyor chain belts could stretch out over time. If this happens, it may be necessary to remove a link or two.
+   3. The conveyor rail on the inside of the oven may occasionally need high temperature grease applied to it, though, this will likely not be an issue for us as we seldom change the conveyor width.
+
+
+4.0 SMT Rework Station
+The SMT Rework station is used for inspecting and reworking SMT assembled boards. SMT rework requires some specialized tools for dealing with the unique challenges that this process presents.
+   1. Always use an ESD wrist strap and jacket when working at this station.
+   2. Never apply excessive pressure when using SMT tips, doing so can damage the tip and the PCB.
+   3. The following are the specialized tips used for SMD rework:[b]
+   1. Hoof tip - this tip is used to drag solder QFPs and other fine leaded components
+   2. Tunnel Tip - used to remove our LED Drivers and octal buffers - Hot air may be needed to remove the LED Drivers
+   3. Bifurcated Tips - These are used to remove chip components. For these to work, the tip should be filled with solder between the prongs. These prongs fit around the ends of the chip and once the solder melts, the surface tension of the solder in the tip picks up the chip.
+   4. Conical tip - this tip is a general purpose tip that works well for reflowing solder to fix bridging, remove solder balls, etc.
+   5. Chisel tip - works well for reflowing solder on larger pads and desoldering using solder braid.
+   1. Our rework station does not have temperature control as the temperature is determined by tip selection. All the tips we have are within the same temperature range.
+   2. Always tin your tips immediately after use!!!
+   3. When inspecting boards, start with the 3.5x Luxo magnifier. Only use higher magnification with the microscope for referee purposes.
+   4. The magnifier and microscope should only be cleaned with the appropriate lens cleaning wipes to prevent damage to the optics.
+   5. Turn the soldering station off at the end of day.
+
+
+
+
+
+
+
+
+
+
+[a]Photos needed to show the correct way to hold the board while putting the stiffeners on.
+[b]Need photos of these tips.

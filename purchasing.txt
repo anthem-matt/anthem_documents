@@ -1,0 +1,50 @@
+##############
+Purchasing SOP
+##############
+
+Updated 8-10-15
+
+.. _top:
+
+Table of Contents
+#################
+
+1.0_ Requisition Process
+
+	1.1 Requisition Form
+	
+	1.2 SKU Structure
+	
+	1.3 Database
+
+2.0 random text
+
+
+
+
+.. _1.0:
+
+1.0 Inventory Management
+########################
+
+Back to top_
+
+1.1 Definitions
+*******************
+	
+	- Parts: Any component or that is used in a finished product (smt components, LEDs, potting, screws, etc)
+	- Production Supplies: Any supplementary supplies that are used for production (Orange sticks, wipes, router bit, PCB Detergent, radial carrier clips)
+	- General Facility Supplies: Items used in the facility, but not for production
+	- Spares: Spare parts used for repairing equipment only as needed.
+	- Maintenance Supplies: Items used to maintain equipment (Grease, oil, etc.)
+	- Consumables - a raw material that is modified for use in a finished product (bar solder, potting), or a supply that has a limited life (drill bits, iron tips)
+	- Database - This will be used throughout this document to refer to our Production Database)
+	
+1.2 SKU Structure
+*****************
+
+
+1.3 Database
+************
+
+The Anthem Displays Production Database is a centralized resource for managing inventory, purchasing, orders, and accounting. 
