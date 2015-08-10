@@ -9,42 +9,42 @@ Updated 8-10-15
 Table of Contents
 #################
 
-1.0_ Requisition Process
+1.0_ Requisition & Purchasing Procedures
 
-	1.1 Requisition Form
+	1.1 Requisition Procedure
 	
-	1.2 Purchasing Process
+	1.2 Purchasing Procedure
 
 
 
 
 .. _1.0:
 
-1.0 Requisition Process
-#######################
+1.0 Requisition & Purchasing Procedures
+#######################################
 
 Back to top_
 
-1.1 Requisition Form
-********************
+1.1 Requisition Procedure
+*************************
 
 The requisition form can be downloaded from Github_.
 
 .. _Github: https://github.com/anthem-matt/anthem_documents/blob/c933c56bce5078449d7cc9161980f10e468e9109/Anthem%20Purchase%20Requistion.xls?raw=true
 
 	- The requestor should fill the form out completely, with the exception of the Purchase Order #.
-	- Any pricing documentation or other relevant information should be included with the requisition.
-	- The completed requisition should be approved by the requestors supervisor before submitting to the purchaser.
+	- Pricing documentation must be included with the requisition.
+	- If pricing is dependent upon volume or is subject to market rates, the price should be verified either online, or by contacting the supplier.
+	- If current pricing is different from previous information update the price to the latest for future reference.
+	- Verify that the part is being assigned to the correct account
+	- The completed requisition must be approved by the CEO before submitting to the purchaser.
 
-1.2 Purchasing Process
-**********************
+
+1.2 Purchasing Procedure
+************************
 
 On receipt of a requisition form, the purchaser should follow these procedures:
 
-	- Check price against last documented pricing, if there is a difference, contact supplier or check online to verify pricing.
-	- If pricing is dependent upon volume or is subject to market rates, the price should be verified either online, or by contacting the supplier.
-	- If current pricing is different from previous information update the price to the latest for future reference.
-	- Confirm delivery date with supplier
-	- Verify that the part is being assigned to the correct account
 	- Place order
+	- Confirm delivery date with supplier
 	- Update Requisition form with the Purchase Order # and save for future reference.
